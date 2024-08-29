@@ -1,0 +1,7 @@
+{% load static %}
+<header class="flex justify-between items-center p-2 pt-4 bg-[whitesmoke] dark:bg-[#0F172A] transition-all">
+  {% comment %} <img class="h-8 object-contain" src="" alt="" /> {% endcomment %}
+  <img class="h-8 object-contain" x-bind:src="!darkMode ? '{% static 'amazon_logo1.png' %}' : '{% static 'amazon_logo2.png' %}'" alt="" />
+
+  <img x-on:click="darkMode = !darkMode" class="w-6 h-6 select-none cursor-pointer -mt-2" x-bind:src="darkMode ? 'https://img.icons8.com/small/64/FFFFFF/menu.png' : 'https://img.icons8.com/small/64/menu.png'" />
+</header>
