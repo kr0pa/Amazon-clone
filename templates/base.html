@@ -32,13 +32,11 @@
     <title>Amazon - clone</title>
     {% tailwind_css %}
   </head>
-  <body class="cursor-default min-w-[400px]">
+  <body class="cursor-default min-w-[400px] bg-white dark:bg-[#2B2D31] grid grid-cols-4 min-h-screen">
     {% include 'includes/header.html' %}
-    <section class="h-screen">
       {% block content %}
 
       {% endblock %}
-    </section>
     {% include 'includes/footer.html' %}
   </body>
 </html>
