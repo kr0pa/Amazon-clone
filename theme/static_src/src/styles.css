@@ -6,18 +6,22 @@
   @apply text-4xl text-purple-500 font-bold;
 }
 
+.mobileClass > li {
+  @apply text-center my-4 bg-white dark:bg-[#1E1F22] w-full p-2 rounded-md cursor-pointer;
+}
+
 html {
   font-family: "Roboto", sans-serif;
 }
 
-header > div {
+header > div:first-child {
   position: relative;
   font-family: "Concert One", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
 
-header > div::after {
+header > div:first-child::after {
   position: absolute;
   top: 50%;
   left: 70%;
