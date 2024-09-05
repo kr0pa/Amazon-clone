@@ -5,9 +5,11 @@
     <section class="flex justify-evenly flex-wrap p-2 min-h-screen bg-gradient-to-b from-orange-600 to-40% to-transparent">
       <banner class="w-full h-[300px] lg:h-[400px] 2xl:h-[500px] bg-cover mt-1 mb-10 rounded bg-no-repeat" style="background-image: url('{% static 'banner.png' %}');"></banner>
       {% for product in products %}
-        <div class="m-2 p-2 basis-full sm:basis-1/3 md:basis-1/4 flex-grow lg:basis-1/5 items-center bg-gradient-to-b from-gray-300 to-[whitesmoke] dark:from-gray-700 dark:to-[#2B2D31] rounded-lg">
-          <img class="h-2/3 w-full mx-auto object-contain rounded-lg bg-white" src="{{ product.image }}" alt="" />
-          <h6 class="font-bold text-center text-black dark:text-white mt-2">{{ product.title }}</h6>
+        <div class="product flex flex-col m-2 p-2 basis-full sm:basis-1/3 md:basis-1/4 flex-grow lg:basis-1/5 items-center bg-gradient-to-b from-gray-300 to-[whitesmoke] dark:from-gray-700 dark:to-[#2B2D31] rounded-lg">
+          <a href="{% url 'app_core:product' product.id %}" class="h-auto w-auto"><img class="h-2/3 w-full mx-auto object-contain rounded-lg bg-white cursor-pointer" src="{{ product.image }}" alt="" /></a>
+          <a href="{% url 'app_core:product' product.id %}" class="h-auto w-auto"><h3 class="font-bold text-center text-black dark:text-white mt-2">{{ product.title }}</h3></a>
+          <a href="{% url 'app_core:product' product.id %}" class="h-auto w-auto"><p class="dark:text-white mt-2 mb-4">{{ product.description|truncatewords:15 }}</p></a>
+          <button class="btn mt-auto">dodaj do koszyka</button>
         </div>
       {% endfor %}
     </section>

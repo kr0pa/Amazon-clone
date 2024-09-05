@@ -2,8 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+.product > a h3:hover,
+.product > a p:hover {
+  @apply text-red-500 transition-all cursor-pointer;
+}
+
 .btn {
-  @apply text-4xl text-purple-500 font-bold;
+  @apply text-sm font-bold px-4 py-2 bg-orange-600 rounded-md transition-all border-2 border-orange-600 uppercase;
+}
+
+.btn:hover {
+  @apply border-yellow-400 bg-orange-500;
 }
 
 .mobileClass > li {
