@@ -1,9 +1,9 @@
 {% load static %}
 <header class="h-14 col-span-full flex justify-between items-center p-2 bg-[whitesmoke] dark:bg-[#0F172A] transition-all relative">
-  <div>
+  <a href="/">
     <img class="h-8 object-contain" x-bind:src="!darkMode ? '{% static 'amazon_logo1.png' %}' : '{% static 'amazon_logo2.png' %}'" alt="" />
-  </div>
-
+  </a>
+    
   <div class="flex items-center">
     <img class="h-9 mr-4 cursor-pointer" x-on:click="darkMode = !darkMode" x-bind:src="darkMode ? 'https://img.icons8.com/ultraviolet/40/moon.png' : 'https://img.icons8.com/emoji/48/sun-emoji.png'" />
 
@@ -19,7 +19,8 @@
         }
       });
     }" 
-    x-cloak class="lex-grow bg-[whitesmoke] dark:bg-[#2B2D31] h-screen w-screen md:mt-0 absolute top-0 left-0" x-transition:enter="duration-300 ease-out" x-transition:enter-start="opacity-0 -translate-y-3/4" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="duration-300 ease-in-out" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-3/4">
+    x-cloak 
+    class="lex-grow bg-[whitesmoke] dark:bg-[#2B2D31] h-screen w-screen md:mt-0 absolute top-0 left-0" x-transition:enter="duration-300 ease-out" x-transition:enter-start="opacity-0 -translate-y-3/4" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="duration-300 ease-in-out" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-3/4">
       <ul class="flex flex-col justify-center items-center h-full text-4xl dark:text-white mobileClass">
         <li x-on:click="open = false">Profil</li>
         <li x-on:click="open = false">Edycja</li>

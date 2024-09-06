@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-.product > a h3:hover,
-.product > a p:hover {
+.product > h3:hover,
+.product > p:hover {
   @apply text-red-500 transition-all cursor-pointer;
 }
 
 .btn {
-  @apply text-sm font-bold px-4 py-2 bg-orange-600 rounded-md transition-all border-2 border-orange-600 uppercase;
+  @apply text-sm font-bold px-4 py-2 bg-orange-600 rounded-md transition-all border-2 border-orange-600 uppercase dark:text-white;
 }
 
 .btn:hover {
