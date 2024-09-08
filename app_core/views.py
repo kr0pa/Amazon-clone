@@ -12,12 +12,14 @@ def home(request):
     products = []
     if 'products' in data:
         for product in data['products']:
+            id = product['id']
             title = product['title']
             description = product['description']
             price = product['price']
             image = product['images'][0]
             
             products.append({
+                'id': id,
                 'title': title,
                 'description': description,
                 'price': price,
@@ -29,8 +31,10 @@ def home(request):
     
     return render(request, 'home.html', {'products': products})
 
-def product(request, id):
+def product(request, pk):
     # response = requests.get("http://fakestoreapi.com/products/{}".format(id))
     # product = response.json()
+    response = requests.get(f"https://dummyjson.com/products/{pk}")
+    product = response.json()
     
     return render(request, 'product.html', {'product': product})

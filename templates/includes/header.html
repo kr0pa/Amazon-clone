@@ -5,9 +5,11 @@
   </a>
     
   <div class="flex items-center">
-    <img class="h-9 mr-4 cursor-pointer" x-on:click="darkMode = !darkMode" x-bind:src="darkMode ? 'https://img.icons8.com/ultraviolet/40/moon.png' : 'https://img.icons8.com/emoji/48/sun-emoji.png'" />
+    <img class="h-8 mr-4 cursor-pointer" x-on:click="darkMode = !darkMode" x-bind:src="darkMode ? 'https://img.icons8.com/ultraviolet/40/moon.png' : 'https://img.icons8.com/emoji/48/sun-emoji.png'" />
 
-    <img x-on:click="open = !open" class="block md:hidden w-6 h-6 translate-y- select-none cursor-pointer mr-2 z-[2]" x-bind:src="!open ? (darkMode ? 'https://img.icons8.com/small/64/FFFFFF/menu.png' : 'https://img.icons8.com/small/64/menu.png') : (darkMode ? 'https://img.icons8.com/small/64/FFFFFF/delete-sign.png' : 'https://img.icons8.com/small/64/delete-sign.png')" />
+    <img class="h-8 mr-4" src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/external-basket-web-flaticons-flat-flat-icons-3.png" />
+
+    <img x-on:click="open = !open" class="block md:hidden h-7 translate-y- select-none cursor-pointer mr-2 z-[2]" x-bind:src="!open ? (darkMode ? 'https://img.icons8.com/small/64/FFFFFF/menu.png' : 'https://img.icons8.com/small/64/menu.png') : (darkMode ? 'https://img.icons8.com/small/64/FFFFFF/delete-sign.png' : 'https://img.icons8.com/small/64/delete-sign.png')" />
 
     <nav 
     x-show="open" 
